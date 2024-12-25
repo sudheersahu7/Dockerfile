@@ -1,11 +1,11 @@
-FROM redhat/ubi8
+FROM ubuntu:latest
 
-RUN yum install python3 -y
+RUN yum install httpd
+
+Run systemctl start httpd
 
 RUN pip3 install flask
 
-WORKDIR /myapp
+WORKDIR /home
 
-COPY app.py deepali.py
-
-CMD ["python3" , "deepali.py"]
+Copy ..
